@@ -6,7 +6,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Halt001/nodejs_typescript_starter.git"
+    "url": "https://github.com/Halt001/nodejs-typescript-starter"
   },
   "watch": {
     "test": { 
