@@ -1,0 +1,45 @@
+{
+  "name": "typescript-test",
+  "version": "1.0.0",
+  "description": "test",
+  "private": true,
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Halt001/nodejs_typescript_starter.git"
+  },
+  "watch": {
+    "test": { 
+      "patterns": "dist/**/*.js", 
+      "quiet": true 
+    }    
+  },
+  "scripts": {
+    "build": "npm run tslint && npm run build-ts",
+    "build-ts": "tsc",
+    "serve": "nodemon dist/server.js",
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "test": "jasmine",
+    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold\" \"npm run watch-ts\" \"npm run serve\"",
+    "watch-ts": "tsc -w",
+    "watch-jasmine": "npm-watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/body-parser": "^1.16.5",
+    "@types/express": "^4.0.37",
+    "@types/jasmine": "^2.5.54",
+    "@types/node": "^8.0.26",
+    "concurrently": "^3.5.0",
+    "npm-watch": "^0.2.0",
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "jasmine": "^2.8.0",
+    "nodemon": "^1.11.0"
+  }
+}
