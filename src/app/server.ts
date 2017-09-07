@@ -2,7 +2,8 @@
 import express = require("express");
 const app = express();
 
-/* Shouldn't this be changed into 
+/*  DO NOT REMOVE THIS COMMENT!!
+Shouldn't this be changed into 
 app.get("/", (req: any, res: any) => { 
 Or even something more specific.
 In any case do not use "implicit any"  
